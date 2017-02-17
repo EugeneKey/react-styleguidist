@@ -82,7 +82,7 @@ export function getFilterRegExp(query) {
  * @return {array}
  */
 export function filterComponentsByName(components, query) {
-	return components.filter(({ name }) => name.match(getFilterRegExp(query)));
+	return components.filter(({ name }) => name && name.match(getFilterRegExp(query)));
 }
 
 /**
